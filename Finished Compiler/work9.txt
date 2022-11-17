@@ -1,0 +1,21 @@
+var x,y,sum:integer;  
+var A: integer;
+procedure SumAvg(P1,P2:integer; var Avg:integer);
+
+var s:integer;
+
+begin
+Avg:=Avg+1;
+end;
+
+procedure doit();
+begin
+end;
+
+begin
+x:=5+7;
+y:=7;
+A:=1;
+SumAvg(x,y,A);
+doit();
+end.

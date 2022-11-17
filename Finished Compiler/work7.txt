@@ -1,0 +1,70 @@
+var x,y,z:integer;
+
+       a,b,c:boolean;
+
+procedure Average(p1,p2,p3:integer;var p4:integer);
+
+       var sum:integer;
+
+       done:boolean;
+
+begin
+
+       a:=true;
+
+       sum:=p1+p2+p3;
+
+       p4:=sum/3;
+
+end;
+
+ 
+
+var w:boolean;
+
+function sq (p1:integer):integer;
+begin
+sq:=5;
+end;
+
+function abs(p1:integer):integer;
+
+var local:integer;
+
+       what:boolean;
+
+begin
+
+       if p1 = 1 then
+
+       begin
+
+              local:=p1*-1;
+
+       end
+
+       else
+
+       begin
+
+              local:=9;
+
+       end;
+
+       abs:=5;
+
+end;
+
+ 
+
+var kig:integer;
+
+begin
+
+       Average(5,6,7,kig);
+
+       x:=abs(1);
+
+       x:=sq(2);
+
+end.

@@ -1,0 +1,9 @@
+var i,j,temp:integer;
+var d2:array[3..5,2..6] of integer;
+
+begin
+       i:=5;
+       d2[5,i]:=10;
+       d2[i,i+1] := d2[i,i];
+       
+end.

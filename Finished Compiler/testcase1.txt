@@ -1,0 +1,43 @@
+var i,j,temp:integer;
+var k:array[1..10] of integer;
+begin
+       i:=8;
+       k[1]:=3;
+       k[i]:=99;
+       k[i+1]:=k[i];
+end.
+Assembler code for code above
+********************************************************************************
+	//  i:=8;
+		mov eax, 8
+		mov [ebp + 0],eax
+
+	// k[1]:=3;
+		mov eax, 1  // array location
+		sub eax, 1  // zero base the index
+		imul eax, 4  // index * size of data
+		add eax, 12  //  Add starting address of array
+		mov ebx, 3  // data to move into array
+		mov [ebp + eax], ebx  // mov data into array
+		
+	// k[i]:=99;
+		mov eax, [ebp + 0]  // mov the index into eax
+		sub eax, 1 // zero base the index
+		imul eax, 4  // index * size of data
+		add eax, 12 //  Add starting address of array
+		mov ebx, 99 // data to move into array
+		mov [ebp + eax], ebx // mov data into array
+		
+	//k[i + 1]: = k[i];
+		mov eax, [ebp + 0]  // mov the index into eax
+		mov ebx, 1  // mov one into ebx
+		add eax,ebx // Add one to the index
+		sub eax, 1 // zero base the index
+		imul eax, 4 // index * size of data
+		add eax, 12 //  Add starting address of array
+		mov ebx, [ebp + 0] // mov the index into ebx
+		sub ebx, 1 // zero base the index
+		imul ebx, 4 // index * size of data
+		add ebx,12 //  Add starting address of array
+		mov ebx, [ebp + ebx] // mov the data from array[index] into ebx
+		mov [ebp + eax], ebx  // mov the data from ebx into array[index+1]

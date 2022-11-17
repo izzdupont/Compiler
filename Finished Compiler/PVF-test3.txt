@@ -1,0 +1,6 @@
+procedure kig();
+begin
+end;
+
+var a,b:integer;
+	d:char;

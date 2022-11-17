@@ -1,0 +1,52 @@
+var i,j,temp:integer;
+var d2:array[3..5,2..6] of integer;
+
+begin
+       i:=5;
+       d2[5,i]:=10;
+       d2[i,i+1] := d2[i,i];
+       
+end.
+
+Assembler code for code above
+********************************************************************************
+
+// i:=5;
+		mov eax, 5
+		mov [ebp + 0],eax
+
+	// d2[5,i]:=10;
+		mov eax, 5  // mov 5 into eax
+		mov ebx, [ebp + 0] // mov index into ebx
+		sub eax, 3 // zero base the row index
+		imul eax, 20 // row size (20) times zero based row index
+		sub ebx, 2 // zero base the column index
+		imul ebx, 4 // column size (4) times zero based column index
+		add eax, ebx // add row skip plus column skip
+		add eax, 12 //  Add starting address of array
+		mov ebx, 10  // mov 10 into ebx
+		mov [ebp + eax], ebx  // store ebx (10) into array[5,i]
+		
+	// d2[i,i+1] := d2[i,i];
+		mov eax, [ebp + 0]  // mov index into eax
+		mov ebx, [ebp + 0]  // mov index into ebx
+		mov ecx, 1 // mov 1 into ecx
+		add ebx,ecx  // add 1 to ebx (index+1)
+		sub eax, 3  // zero base the row index
+		imul eax, 20  // row size (20) times zero based row index
+		sub ebx, 2  // zero base the column index
+		imul ebx, 4 // column size (4) times zero based column index
+		add eax, ebx  // add row skip plus column skip
+		add eax, 12 //  Add starting address of array
+		mov ebx, [ebp + 0] // mov index into ebx
+		mov ecx, [ebp + 0] // mov index into ecx
+		sub ebx, 3 // zero base the row index
+		imul ebx, 20 // row size (20) times zero based row index
+		sub ecx, 2 // zero base the column index
+		imul ecx, 4 // column size (4) times zero based column index
+		add ebx, ecx // add row skip plus column skip
+		add ebx, 12 //  Add starting address of array
+		mov ebx, [ebp + ebx] // move data from array[i,i] into ebx
+		mov [ebp + eax], ebx // mov ebx into array[i,i+1]
+
+********************************************************************************

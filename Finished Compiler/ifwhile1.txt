@@ -1,0 +1,22 @@
+var x,y,z,a,b,c,e,d,i,g,h,f:integer;       
+begin
+if (x<5) or (z=6) then
+begin 
+	while (a=5) and (b>3) do
+	begin
+		b:=b+1;
+		while (c=6) and (d=5) or (e<7) do
+		begin 
+			e:=e+1;
+		end
+	end;
+	while (g>3) or (h=2) and (i=3) do
+	begin	
+		g:=g+1;
+	end
+end
+else
+begin
+	f:=f+1;
+end
+end.

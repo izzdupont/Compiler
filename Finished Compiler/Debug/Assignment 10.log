@@ -1,0 +1,9 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Assignment 10.vcxproj, Assignment 4.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Assignment 7.cpp
+C:\Users\luizz\source\Coding - VisualStudio\Compiler\Assignment 8\PParser.h(1343,25): warning C4018: '<': signed/unsigned mismatch
+C:\Users\luizz\source\Coding - VisualStudio\Compiler\Assignment 8\PParser.h(1563,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\luizz\source\Coding - VisualStudio\Compiler\Assignment 8\PParser.h(1606,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\luizz\source\Coding - VisualStudio\Compiler\Assignment 8\PParser.h(1635,25): warning C4018: '<': signed/unsigned mismatch
+C:\Users\luizz\source\Coding - VisualStudio\Compiler\Assignment 8\PParser.h(1685,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\luizz\source\Coding - VisualStudio\Compiler\Assignment 8\SymbolTable.h(213): warning C4715: 'SymbolTable::getParamInfo': not all control paths return a value
+  Assignment 10.vcxproj -> C:\Users\luizz\source\Coding - VisualStudio\Compiler\Assignment 8\Debug\Assignment 7.exe

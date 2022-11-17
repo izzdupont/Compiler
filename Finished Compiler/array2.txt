@@ -1,0 +1,8 @@
+var oned:array[0..5] of integer;
+var twod:array[2..4,10..12] of integer;
+    sum:integer;
+begin
+  oned[2]:=5;
+  twod[3,11]:=22;
+  sum:= oned[2] + twod[3,11];   
+end.

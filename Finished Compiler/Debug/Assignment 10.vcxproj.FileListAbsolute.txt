@@ -1,0 +1,8 @@
+C:\Users\luizz\source\repos\Assignment 10\Debug\Assignment 10.exe
+C:\Users\luizz\source\Coding - VisualStudio\Compiler\Assignment 4\Debug\Assignment 4.exe
+C:\Users\luizz\source\repos\Compiler\Assignment 4\Debug\Assignment 4.exe
+C:\Users\luizz\source\Coding - VisualStudio\Compiler\Assignment 4 Fixed\Debug\Assignment 4.exe
+C:\Users\luizz\source\repos\Assignment 6\Debug\Assignment 4.exe
+C:\Users\luizz\source\Coding - VisualStudio\Compiler\Assignment 6\Debug\Assignment 4.exe
+C:\Users\luizz\source\Coding - VisualStudio\Compiler\Assignment 7\Debug\Assignment 7.exe
+C:\Users\luizz\source\Coding - VisualStudio\Compiler\Assignment 8\Debug\Assignment 7.exe
